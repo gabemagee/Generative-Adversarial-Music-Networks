@@ -33,7 +33,8 @@ def create_samples(seconds,framerate):
     t = time.time() - t0
     print(t)
     print(c)
-    print(t/c)
+    if c!=0:
+        print(t/c)
 
 def to_wav(infile):
     if infile[-3:] == "jpg":
