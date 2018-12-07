@@ -2,6 +2,7 @@ import os
 import subprocess
 import time
 import wave
+from pathlib import Path
 
 
 def get_length(filename):
@@ -18,8 +19,8 @@ def create_samples(seconds,framerate):
     for i in [0,1]:
         print("Creating "+label[i]+" examples")
         o = os.getcwd()
-        src = o+"\\pre\\"+label[i]
-        dest = o+"\\post\\"+label[i]
+        src = Path(o,"pre",label[i])
+        dest = Path(o,"post",label[i])
         os.chdir(src)
         folders = [str(i[0]) for i in os.walk(os.getcwd())]
         for folder in folders:
@@ -81,7 +82,7 @@ def make_sample(input,dir,iter,start,duration,rate):
     except:
         pass
     try:
-        os.remove(dir+"\\"+dest)
+        os.remove(Path(dir,dest))
     except:
         pass
     snip(input,placeholder,start,duration)
@@ -89,7 +90,7 @@ def make_sample(input,dir,iter,start,duration,rate):
     to_mono(placeholder2, dest)
     os.remove(placeholder)
     os.remove(placeholder2)
-    os.rename(dest,dir+"\\"+dest)
+    os.rename(dest,Path(dir,dest))
 
 
 
