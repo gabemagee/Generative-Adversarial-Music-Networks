@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="116776f2-74f6-47fe-b25f-25a7ce2a2618" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/youtube_downloader.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yt.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/151_final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/151_final.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HEAT.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/discriminator.py" beforeDir="false" afterPath="$PROJECT_DIR$/discriminator.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,83 +13,12 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1122881835">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.20" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="4" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="py" value="9" />
-          <entry key="wav" value="7" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Python" value="9" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="py" value="6634" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="Python" value="6634" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.vcs.git.usages" />
-    </session>
-    <session id="1654676346">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="4" />
-          <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.1" value="3" />
-          <entry key="project.opened" value="5" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="py" value="1288" />
-          <entry key="txt" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="1288" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.vcs.git.usages" />
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="py" value="1" />
-          <entry key="txt" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sampler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
+            <state relative-caret-position="675">
               <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -98,14 +27,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/youtube_downloader.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
               <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <marker date="1543363898173" expanded="true" signature="226:231" ph="..." />
               </folding>
             </state>
           </provider>
@@ -120,11 +48,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/discriminator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="585">
+              <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#17#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -148,23 +79,24 @@
         <option value="$PROJECT_DIR$/torch_audio.py" />
         <option value="$USER_HOME$/venv/151_final/Lib/site-packages/ffmpeg/_run.py" />
         <option value="$PROJECT_DIR$/ff.py" />
-        <option value="$PROJECT_DIR$/discriminator.py" />
         <option value="$PROJECT_DIR$/sampler.py" />
         <option value="$PROJECT_DIR$/yt.txt" />
         <option value="$PROJECT_DIR$/youtube_downloader.py" />
+        <option value="$PROJECT_DIR$/discriminator.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="995" />
-    <option name="width" value="935" />
-    <option name="height" value="1040" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="814" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -172,11 +104,20 @@
               <item name="Generative-Adversarial-Music-Networks" type="b2602c69:ProjectViewProjectNode" />
               <item name="Generative-Adversarial-Music-Networks" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Generative-Adversarial-Music-Networks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Generative-Adversarial-Music-Networks" type="462c0819:PsiDirectoryNode" />
+              <item name="post" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Generative-Adversarial-Music-Networks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Generative-Adversarial-Music-Networks" type="462c0819:PsiDirectoryNode" />
+              <item name="pre" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -320,9 +261,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="814" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989429" visible="true" weight="0.23825504" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989429" visible="true" weight="0.23819591" />
       <window_info id="Structure" order="1" sideWeight="0.5010571" side_tool="true" weight="0.20402685" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -343,34 +285,19 @@
       <window_info anchor="right" id="R Packages" order="4" />
     </layout>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/positive_samples_pre/l/HEAT.wav" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/wave.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="498" selection-start-line="498" selection-end-line="498" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/wave.py" />
     <entry file="file://$PROJECT_DIR$/positive_samples_pre/01 - HEAT/01 - HEAT-0.wav" />
     <entry file="file://$PROJECT_DIR$/positive_samples_post/01 - HEAT-17.wav" />
     <entry file="file://$PROJECT_DIR$/torch_audio.py" />
-    <entry file="file://$USER_HOME$/venv/151_final/Lib/site-packages/ffmpeg/_run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="207" column="86" selection-start-line="207" selection-start-column="86" selection-end-line="207" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/venv/151_final/Lib/site-packages/ffmpeg/_run.py" />
     <entry file="file://$PROJECT_DIR$/midi.py" />
     <entry file="file://$PROJECT_DIR$/ff.py" />
     <entry file="file://$PROJECT_DIR$/HEAT.wav" />
     <entry file="file://$PROJECT_DIR$/sampler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
+        <state relative-caret-position="675">
           <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -385,20 +312,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/discriminator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/youtube_downloader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1543363898173" expanded="true" signature="226:231" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/discriminator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
           </folding>
         </state>
       </provider>
