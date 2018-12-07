@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="116776f2-74f6-47fe-b25f-25a7ce2a2618" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/youtube_downloader.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yt.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/151_final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/151_final.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HEAT.wav" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,10 +50,11 @@
     <session id="1654676346">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="3" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -86,11 +86,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sampler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
+            <state relative-caret-position="187">
+              <caret line="88" column="42" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -98,7 +98,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/youtube_downloader.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
@@ -156,8 +156,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="995" />
-    <option name="width" value="935" />
+    <option name="x" value="950" />
+    <option name="width" value="980" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectView">
@@ -165,6 +165,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -176,7 +177,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -321,8 +321,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989429" visible="true" weight="0.23825504" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989429" visible="true" weight="0.24161074" />
       <window_info id="Structure" order="1" sideWeight="0.5010571" side_tool="true" weight="0.20402685" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -368,16 +369,6 @@
     <entry file="file://$PROJECT_DIR$/midi.py" />
     <entry file="file://$PROJECT_DIR$/ff.py" />
     <entry file="file://$PROJECT_DIR$/HEAT.wav" />
-    <entry file="file://$PROJECT_DIR$/sampler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yt.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -399,6 +390,16 @@
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <marker date="1543363898173" expanded="true" signature="226:231" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sampler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="88" column="42" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
