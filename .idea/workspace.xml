@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="116776f2-74f6-47fe-b25f-25a7ce2a2618" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/discriminator.py" beforeDir="false" afterPath="$PROJECT_DIR$/discriminator.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,7 +28,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/youtube_downloader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="180">
               <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -48,10 +49,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/discriminator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="95" column="26" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
+            <state relative-caret-position="408">
+              <caret line="201" lean-forward="true" selection-start-line="201" selection-end-line="201" />
               <folding>
-                <element signature="e#0#17#0" expanded="true" />
+                <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#771#2120#0" />
               </folding>
             </state>
           </provider>
@@ -93,7 +95,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -115,6 +116,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -302,16 +304,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yt.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="43" selection-start-column="43" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/youtube_downloader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="180">
           <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -319,12 +314,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/yt.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="43" selection-start-column="43" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/discriminator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="95" column="26" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
+        <state relative-caret-position="408">
+          <caret line="201" lean-forward="true" selection-start-line="201" selection-end-line="201" />
           <folding>
-            <element signature="e#0#17#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#771#2120#0" />
           </folding>
         </state>
       </provider>
