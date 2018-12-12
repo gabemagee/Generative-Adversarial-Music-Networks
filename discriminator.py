@@ -1,14 +1,19 @@
+<<<<<<< HEAD
 import random
 
 import torchaudio
+=======
+>>>>>>> 67fa73332af2e251390068ca3335adf4c4c60b29
 import os
-import torch
 
 
 
 
 """
 
+=======
+"""
+>>>>>>> 67fa73332af2e251390068ca3335adf4c4c60b29
 o = os.getcwd()
 os.chdir(o+"/post/positive/")
 audio_tensor, sample_rate = torchaudio.load('1.wav')
@@ -20,6 +25,7 @@ sz = audio_tensor.size()
 print(sz,sample_rate)
 os.chdir(o)
 
+<<<<<<< HEAD
 things to think about 
 
 1. what ratio of samples should go in training versus validation?
@@ -34,6 +40,8 @@ things to think about
 
 """
 
+=======
+>>>>>>> 67fa73332af2e251390068ca3335adf4c4c60b29
 input_dimension = 15000000
 output_dimension = 1
 model=torch.nn.Sequential(torch.nn.Linear(input_dimension,output_dimension))
@@ -95,10 +103,6 @@ class Linear_Model(torch.nn.Module):
         self.loss_fn = torch.nn.MSELoss(size_average=True)
 
     def evaluate(self,input_file):
-        """
-        :param input_file: the name of the file to be evaluated
-        :return:
-        """
         tensor, sample_rate = torchaudio.load(input_file)
 
         #check if the sample rate and size are correct
@@ -124,7 +128,27 @@ class Linear_Model(torch.nn.Module):
                 for param in model.parameters():
                     param -= self.learning_rate * param.grad
 
+"""
 
+"""
+things to think about 
+
+1. what ratio of samples should go in training versus validation?
+
+2. what ratio of training set should be negative/positive
+
+3. Model architecture?
+
+ - tensor ->
+
+4. 
+
+"""
+
+
+
+
+<<<<<<< HEAD
 def directory_to_testing_set(positive_ratio,testing_ratio):
     all_samples = os.getcwd() + "/post/"
     negative = all_samples + "/negative/"
@@ -199,3 +223,32 @@ def n_random_elts(lst,n):
         del original[i]
     return sample, original
 
+=======
+def directory_to_testing_set(training_set_directory):
+    os.chdir(training_set_directory)
+    subdirs = os.listdir()
+    pos = os.getcwd()+"\\positive\\"
+    neg = os.getcwd()+"\\negative\\"
+    os.chdir(pos)
+    postitive_samples = os.walk(pos)
+    os.chdir(neg)
+    negative_samples = os.walk(neg)
+    #print(postitive_samples)
+    #print(negative_samples)
+    res = []
+    for (dirpath, dirnames, filenames) in postitive_samples:
+        if len(filenames)!=0:
+            for file in filenames:
+                res.append((dirpath+"\\"+file,1))
+    for (dirpath, dirnames, filenames) in negative_samples:
+        if len(filenames)!=0:
+            for file in filenames:
+                res.append((dirpath+"\\"+file,0))
+    return res
+
+
+l = directory_to_testing_set(os.getcwd()+"/pre/")
+
+for i in l:
+    print(i)
+>>>>>>> 67fa73332af2e251390068ca3335adf4c4c60b29
