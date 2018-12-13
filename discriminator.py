@@ -14,17 +14,6 @@ print(sz,sample_rate)
 os.chdir(o)
 
 
-things to think about 
-
-1. what ratio of samples should go in training versus validation?
-
-2. what ratio of training set should be negative/positive
-
-3. Model architecture?
-
- - tensor ->
-
-4. 
 
 input_dimension = 15000000
 output_dimension = 1
@@ -139,12 +128,10 @@ def directory_to_testing_set(positive_ratio,testing_ratio):
     positive_sample_testing = int(len(positive_sample_lst)*testing_ratio)
     positive_samples = n_random_elts(positive_sample_lst,positive_sample_testing)
     negative_samples = n_random_elts(negative_sample_lst,negative_sample_testing)
-
     validation_pos = positive_samples[1]
     validation_neg = negative_samples[1]
     testing_pos = positive_samples[0]
     testing_neg = negative_samples[0]
-
     a = int((len(validation_neg)+len(validation_pos))*positive_ratio)
     b = len(validation_neg)+len(validation_pos) - a
     if a <= len(validation_pos) and b < len(validation_neg):
@@ -160,8 +147,6 @@ def directory_to_testing_set(positive_ratio,testing_ratio):
         pv = n_random_elts(validation_pos,n)[0]
     else:
         raise Exception("division error validation set")
-
-
     a = int((len(testing_neg)+len(testing_pos))*positive_ratio)
     b = len(testing_neg)+len(testing_pos) - a
     if a <= len(testing_pos) and b < len(testing_neg):
@@ -177,8 +162,6 @@ def directory_to_testing_set(positive_ratio,testing_ratio):
         pt = n_random_elts(testing_pos,n)[0]
     else:
         raise Exception("division error validation set")
-
-
     for i in range(len(pt)):
         pt[i] = (positive + pt[i],1)
     for i in range(len(nt)):
@@ -187,7 +170,7 @@ def directory_to_testing_set(positive_ratio,testing_ratio):
         pv[i] = (positive + pv[i],1)
     for i in range(len(nv)):
         nv[i] = (negative + nv[i],0)
-    l = [pt,nt,pv]
+    l = [pt,nt,pv,nv]
     return l
 
 
@@ -203,30 +186,3 @@ def n_random_elts(lst,n):
         del original[i]
     return sample, original
 
-def directory_to_testing_set(training_set_directory):
-    os.chdir(training_set_directory)
-    subdirs = os.listdir()
-    pos = os.getcwd()+"\\positive\\"
-    neg = os.getcwd()+"\\negative\\"
-    os.chdir(pos)
-    postitive_samples = os.walk(pos)
-    os.chdir(neg)
-    negative_samples = os.walk(neg)
-    #print(postitive_samples)
-    #print(negative_samples)
-    res = []
-    for (dirpath, dirnames, filenames) in postitive_samples:
-        if len(filenames)!=0:
-            for file in filenames:
-                res.append((dirpath+"\\"+file,1))
-    for (dirpath, dirnames, filenames) in negative_samples:
-        if len(filenames)!=0:
-            for file in filenames:
-                res.append((dirpath+"\\"+file,0))
-    return res
-
-
-l = directory_to_testing_set(os.getcwd()+"/pre/")
-
-for i in l:
-    print(i)
