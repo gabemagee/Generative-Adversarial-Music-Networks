@@ -1,28 +1,29 @@
 import random
 import torchaudio
 import os
+import torch
+
+
+
+def file_to_RNN_tensor(filename):
+    tensor,sample_rate = torchaudio.load(filename)
+    b = list(torch.split(tensor,sample_rate))[:-1]
+    for i in b:
+        print(i.size())
+    b = torch.stack(b)
+    return b
+
 
 o = os.getcwd()
 os.chdir(o+"/post/positive/")
-audio_tensor, sample_rate = torchaudio.load('1.wav')
-sz = list(audio_tensor.size())
-print(sz[0],sample_rate)
-print("-----")
-audio_tensor, sample_rate = torchaudio.load('2.wav')
-sz = audio_tensor.size()
-print(sz,sample_rate)
+a = file_to_RNN_tensor("0.wav")
 os.chdir(o)
 
 
-
-input_dimension = 15000000
-output_dimension = 1
-model=torch.nn.Sequential(torch.nn.Linear(input_dimension,output_dimension))
-
-class RNN_Model(torch.nn.Module):
+class discriminator_RNN(torch.nn.Module):
 
     def __init__(self,input_size,hidden_size,output_size):
-        super(RNN_Model,self).__init__()
+        super(discriminator_RNN,self).__init__()
         self.hidden_size = hidden_size
         self.i2h = torch.nn.Linear(input_size+hidden_size,hidden_size)
         self.i2o = torch.nn.Linear(input_size+hidden_size,output_size)
@@ -38,25 +39,26 @@ class RNN_Model(torch.nn.Module):
     def initHidden(self):
         return torch.zeros(1, self.hidden_size)
 
-rnn = RNN_Model(100000,100,1)
+    def train_rnn(self,input_tensor,result_tensor):
+
+        hidden = self.initHidden()
+
+        self.zero_grad()
+
+        for i in range(input_tensor.size()[0]):
+            output, hidden = self.forward(input_tensor[i],hidden)
+
+        loss = torch.nn.NLLLoss(output,result_tensor)
+        loss.backward()
+        for p in self.parameters():
+            p.data.add_(-self.learning_rate,p.grad.data)
+
+        return output, loss.item()
+
+
+
+rnn = discriminator_RNN(10000,100,1)
 print(rnn.parameters())
-
-def train_rnn(rnn,input_tensor,result_tensor):
-
-    hidden = rnn.initHidden()
-
-    rnn.zero_grad()
-
-    for i in range(input_tensor.size()[0]):
-        output, hidden = rnn(input_tensor[i],hidden)
-
-    loss = torch.nn.NLLLoss(output,result_tensor)
-    loss.backward()
-    for p in rnn.parameters():
-        p.data.add_(-rnn.learning_rate,p.grad.data)
-
-    return output, loss.item()
-
 
 
 
@@ -143,7 +145,7 @@ def directory_to_testing_set(positive_ratio,testing_ratio):
         nv = n_random_elts(validation_neg,n)[0]
     elif b > len(validation_neg) and a <= len(validation_pos):
         nv = validation_neg
-        n = (len(validation_neg) / (1-positive_ratio)) * positive_ratio
+        n = int((len(validation_neg) / (1-positive_ratio)) * positive_ratio)
         pv = n_random_elts(validation_pos,n)[0]
     else:
         raise Exception("division error validation set")
@@ -158,7 +160,7 @@ def directory_to_testing_set(positive_ratio,testing_ratio):
         nt = n_random_elts(testing_neg,n)[0]
     elif b > len(testing_neg) and a <= len(testing_pos):
         nt = testing_neg
-        n = (len(testing_neg) / (1-positive_ratio)) * positive_ratio
+        n = int((len(testing_neg) / (1-positive_ratio)) * positive_ratio)
         pt = n_random_elts(testing_pos,n)[0]
     else:
         raise Exception("division error validation set")
@@ -186,3 +188,7 @@ def n_random_elts(lst,n):
         del original[i]
     return sample, original
 
+a = directory_to_testing_set(.3,.7)
+
+for i in a:
+    print(i)
