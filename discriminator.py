@@ -106,7 +106,7 @@ class Linear_Model(torch.nn.Module):
 
 
 """
-things to think about 
+things to think about
 
 1. what ratio of samples should go in training versus validation?
 
@@ -116,64 +116,11 @@ things to think about
 
  - tensor ->
 
-4. 
+4.
 
 """
 
-def directory_to_testing_set(positive_ratio,testing_ratio):
-    all_samples = os.getcwd() + "/post/"
-    negative = all_samples + "/negative/"
-    positive = all_samples + "/positive/"
-    negative_sample_lst = os.listdir(negative)
-    positive_sample_lst = os.listdir(positive)
-    negative_sample_testing = int(len(negative_sample_lst)*testing_ratio)
-    positive_sample_testing = int(len(positive_sample_lst)*testing_ratio)
-    positive_samples = n_random_elts(positive_sample_lst,positive_sample_testing)
-    negative_samples = n_random_elts(negative_sample_lst,negative_sample_testing)
-    validation_pos = positive_samples[1]
-    validation_neg = negative_samples[1]
-    testing_pos = positive_samples[0]
-    testing_neg = negative_samples[0]
-    a = int((len(validation_neg)+len(validation_pos))*positive_ratio)
-    b = len(validation_neg)+len(validation_pos) - a
-    if a <= len(validation_pos) and b < len(validation_neg):
-        pv = n_random_elts(validation_pos,a)[0]
-        nv = n_random_elts(validation_neg,b)[0]
-    elif a > len(validation_pos) and b < len(validation_neg):
-        pv = validation_pos
-        n = (len(validation_pos)/positive_ratio)*(1-positive_ratio)
-        nv = n_random_elts(validation_neg,n)[0]
-    elif b > len(validation_neg) and a <= len(validation_pos):
-        nv = validation_neg
-        n = int((len(validation_neg) / (1-positive_ratio)) * positive_ratio)
-        pv = n_random_elts(validation_pos,n)[0]
-    else:
-        raise Exception("division error validation set")
-    a = int((len(testing_neg)+len(testing_pos))*positive_ratio)
-    b = len(testing_neg)+len(testing_pos) - a
-    if a <= len(testing_pos) and b < len(testing_neg):
-        pt = n_random_elts(testing_pos,a)[0]
-        nt = n_random_elts(testing_neg,b)[0]
-    elif a > len(testing_pos) and b < len(testing_neg):
-        pt = testing_pos
-        n = (len(testing_pos)/positive_ratio)*(1-positive_ratio)
-        nt = n_random_elts(testing_neg,n)[0]
-    elif b > len(testing_neg) and a <= len(testing_pos):
-        nt = testing_neg
-        n = int((len(testing_neg) / (1-positive_ratio)) * positive_ratio)
-        pt = n_random_elts(testing_pos,n)[0]
-    else:
-        raise Exception("division error validation set")
-    for i in range(len(pt)):
-        pt[i] = (positive + pt[i],1)
-    for i in range(len(nt)):
-        nt[i] = (negative + nt[i],0)
-    for i in range(len(pv)):
-        pv[i] = (positive + pv[i],1)
-    for i in range(len(nv)):
-        nv[i] = (negative + nv[i],0)
-    l = [pt,nt,pv,nv]
-    return l
+
 
 
 
