@@ -10,6 +10,11 @@ Starts with random inputs and generates what could be a music file, passes it to
 ### Other
 Also in this file are other dependencies such as audiotorch-using methods I made to convert .wav files into RNN-acceptable tensors. Another method I have is one that divides the testing and validation sets up randomly by a preconceived ratio so we can evaluate our model after we train it.
 
-### Examples of products
+### Examples of products of this GAN
 
 Pending!
+
+
+### Credits and Thanks
+
+I got a lot of help and support from Asya Shklyar, Pomona ITS and HPC, Professor Joseph Osborn on questions regarding Cuda, GPUs, PyTorch, ffmpeg, data sources, and etc. If I hope to continue this project I will probably seek their help again! Additionally, I must also mention that the skeleton for the RNN in both classes was based on https://pytorch.org/tutorials/intermediate/char_rnn_classification_tutorial.html this tutorial from PyTorch.
