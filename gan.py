@@ -225,7 +225,8 @@ def main():
     #training
     for i in range(iter):
         for sample,result in [testing_set[0]]:
-            input = file_to_RNN_tensor(sample)
+            input = torch.load(sample)
+            print(input.size())
             result_tensor = torch.Tensor(tuple([result]))
             disc.train_rnn(input_tensor=input,result_tensor=result_tensor)
 
