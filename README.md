@@ -9,3 +9,7 @@ Starts with random inputs and generates what could be a music file, passes it to
 
 ### Other
 Also in this file are other dependencies such as audiotorch-using methods I made to convert .wav files into RNN-acceptable tensors. Another method I have is one that divides the testing and validation sets up randomly by a preconceived ratio so we can evaluate our model after we train it.
+
+### Examples of products
+
+Pending!
