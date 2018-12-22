@@ -12,7 +12,7 @@ Also in this file are other dependencies such as audiotorch-using methods I made
 
 ### Examples of products of this GAN
 
-Pending!
+Most of these files don't sound like music. But if you want to listen to them there will be a directory with a few examples in them.
 
 
 ### Credits and Thanks
